@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style_cek_usia.css">
+    <title>CekUsia</title>
+</head>
+<body>
+    <div class="container">
+        <form action="usia" method="POST">
+            <label for="tahun">masukkan tahun lahir anda</label>
+            <br>
+            <input type="number" id="tahun" name="tahun_lahir">
+            <input type="submit" class="submit">
+            {% if usia is not none %}
+            <p>usia kamu adalah {{usia}} tahun</p>
+            {% endif%}
+        </form>
+        <div class="ai-container">
+            <h3>fakta menarik teknologi di tahun lahirmu</h3>
+            <p>{{ output_ai }}</p>
+        </div>
+    </div>
+</body>
+</html>
